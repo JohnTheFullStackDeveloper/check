@@ -6,4 +6,4 @@ const server = http.createServer((req, res) => {
 });
 server.listen(port,()=>{
     console.log(`Server started on port ${port}`);
-});
+})
