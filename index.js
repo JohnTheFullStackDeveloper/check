@@ -16,6 +16,6 @@ io.on("connection", (socket) => {
     socket.emit("onConnect",socket.id)
 })
 
-io.listen(port, () => {
+http.listen(port, () => {
     console.log("Listening on port " + port)
 })
