@@ -1,9 +1,19 @@
-const http = require("http")
-const port = process.env.port || 3000
-const server = http.createServer((res,req)=>{
-    req.write("hello john prakash")
-    req.end()
+const express = require("express")
+const app = express()
+const http = require("http").Server(app)
+const io = require("socket.io")(http,{
+    cors:{
+        origin: "*",
+        method:"GET",
+        allowHeaders:true,
+        credentials:true
+    }
+});
+
+const port = process.env.PORT || 3000
+
+io.on("connection", (socket) => {
+    socket.emit("onConnect",socket.id)
 })
-server.listen(port,()=>{
-    console.log("listening in "+port)
-})
+
+io.listen(port, () => {})
