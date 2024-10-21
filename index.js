@@ -30,7 +30,7 @@ let list = [
     "35.0",
     "75.0"
 ]
-let now = [(Math.random()*100).toFixed(2)]
+let now = [(Math.random()*10).toFixed(2)]
 let send = [1.00]
 console.log(now)
 let Interval = setInterval(()=>{
@@ -42,7 +42,7 @@ function sendX() {
         console.log("gone")
         io.emit("getX","gone")
         clearInterval(Interval)
-        now[0] = (Math.random()*100).toFixed(2)
+        now[0] = (Math.random()*10).toFixed(2)
         send[0] = 1.0
         console.log(now)
         setTimeout(()=>{
