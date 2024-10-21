@@ -10,6 +10,26 @@ const io = require('socket.io')(http,{
         credentials:true
     }
 })
+let list = [
+    "1.11",
+    "1.23",
+    "1.39",
+    "1.42",
+    "1.25",
+    "1.62",
+    "1.71",
+    "1.88",
+    "1.93",
+    "2.10",
+    "2.32",
+    "3.52",
+    "3.52",
+    "5.11",
+    "7.51",
+    "20.0",
+    "35.0",
+    "75.0"
+]
 let now = [(Math.random()*100).toFixed(2)]
 let send = [1.00]
 console.log(now)
